@@ -46,8 +46,9 @@ public class MainActivity extends Activity {
                 if (v.getId() == R.id.buttonSend) {
                     if (mimeType == null) {
                         String number = editTextTelephone.getText().toString();
-                        if (number.length() < 9) number = "+5585" + number;
                         if (number.length() < 8) number = "+55859" + number;
+                        if (number.length() < 9) number = "+5585" + number;
+                        if (number.length() < 12) number = "+55" + number;
                         Intent i = new Intent(Intent.ACTION_VIEW);
                         i.setData(Uri.parse("https://api.whatsapp.com/send?phone=" + number + "&text=" + editTextMessage.getText().toString()));
                         startActivity(i);
