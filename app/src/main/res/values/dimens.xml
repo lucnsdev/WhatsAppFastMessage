@@ -1,0 +1,11 @@
+<resources>
+    <dimen name="margin">8dp</dimen>
+    <dimen name="margin_2">12dp</dimen>
+    <dimen name="margin_3">16dp</dimen>
+    <dimen name="margin_4">24dp</dimen>
+    <dimen name="margin_5">36dp</dimen>
+    <dimen name="margin_6">42dp</dimen>
+
+    <dimen name="default_height">48dp</dimen>
+    <dimen name="button_width">220dp</dimen>
+</resources>

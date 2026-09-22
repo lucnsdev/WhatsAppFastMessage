@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="36sp" />
+
+        <EditText
+            android:id="@+id/editTextTelephone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_6"
+            android:background="@drawable/edit_text_background"
+            android:hint="@string/telephone"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:paddingStart="@dimen/margin_2"
+            android:paddingTop="@dimen/margin_2"
+            android:paddingEnd="@dimen/margin_2"
+            android:paddingBottom="@dimen/margin_2"
+            android:textColor="@color/white"
+            android:textCursorDrawable="@drawable/cursor_accent" />
+
+        <EditText
+            android:id="@+id/editTextMessage"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginTop="@dimen/margin"
+            android:background="@drawable/edit_text_background"
+            android:gravity="top|start"
+            android:hint="@string/message"
+            android:imeOptions="actionNone"
+            android:inputType="text|textCapSentences|textMultiLine"
+            android:paddingStart="@dimen/margin_2"
+            android:paddingTop="@dimen/margin_2"
+            android:paddingEnd="@dimen/margin_2"
+            android:paddingBottom="@dimen/margin_2"
+            android:textColor="@color/white"
+            android:textCursorDrawable="@drawable/cursor_accent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_2"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/default_height"
+                android:layout_marginEnd="@dimen/margin_2"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_background">
+
+                <TextView
+                    android:id="@+id/textFileName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/margin_2"
+                    android:singleLine="true"
+                    android:text="@string/no_selected_file"
+                    android:textColor="@color/gray"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/buttonPickFile"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/default_height"
+                android:layout_gravity="center"
+                android:background="@drawable/button_state"
+                android:text="@string/pick_file"
+                android:textColor="@color/accent" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonSend"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/default_height"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_4"
+            android:background="@drawable/button_accent_state"
+            android:enabled="false"
+            android:text="@string/send"
+            android:textColor="@drawable/text_state" />
+    </LinearLayout>
+</RelativeLayout>
